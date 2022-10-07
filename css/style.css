@@ -1,0 +1,62 @@
+[data-p="p"]{
+    width: 550px;
+    height: 550px;
+    background: blueviolet;
+    display: inline-block;
+    transition: all 10s linear;
+    transform: rotate(0deg);
+}
+[data-p="p"]:hover{
+    background-color: beige;
+    transform:rotate(360deg);
+}
+
+/*syntex---
+    Syntax
+	   parent > child{
+	 }
+*/
+/* state 1*/
+[data-p="p"] > .a1{
+    width: 100px;
+    height: 100px;
+    background: crimson;
+    border-radius: 100px;
+    transition: all 10s linear ;
+    display: inline-block;
+    transform: translate(0px,0px);
+    position: relative;
+  
+}
+/* state 2*/
+[data-p="p"]:hover > .a1{
+    background-color: black;
+    transform: translate(0px,425px);
+}
+/* state 1*/
+
+.a{
+    width: 70px;
+    height: 70px;
+    background: darkblue;
+    display: inline-block;
+    border-bottom-left-radius: 70px;
+    border-top-right-radius: 70px;
+    position: absolute;
+    margin: 10px auto;
+    left: 16px;
+    top:1px;
+    right: 30px;
+    transition: all 10s linear;
+
+}
+/* state 2*/
+[data-p="p"]:hover > [data-c="c"] > .a{
+    background: white;
+
+}
+/* state 2*/
+[data-p="p"]:hover > .a1 > .a{
+    background: whitesmoke;
+
+}
